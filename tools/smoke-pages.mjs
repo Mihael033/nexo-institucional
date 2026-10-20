@@ -32,7 +32,18 @@ class Cdp {
       } else if (msg.method) for (const fn of this.listeners.get(msg.method) || []) fn(msg.params);
     });
   }
-  send(method, params = {}) { const id = ++this.id; this.ws.send(JSON.stringify({ id, method, params })); return new Promise((resolve, reject) => this.pending.set(id, { resolve, reject })); }
+  /** Con tiempo límite: un navegador bloqueado (p. ej. sandbox del sistema) no deja la prueba colgada. */
+  send(method, params = {}, timeout = 30000) {
+    const id = ++this.id;
+    this.ws.send(JSON.stringify({ id, method, params }));
+    return new Promise((resolve, reject) => {
+      const timer = setTimeout(() => {
+        this.pending.delete(id);
+        reject(new Error(`El navegador no respondió a ${method} en ${timeout / 1000} s (en entornos aislados prueba con CI=1, que añade --no-sandbox).`));
+      }, timeout);
+      this.pending.set(id, { resolve: (v) => { clearTimeout(timer); resolve(v); }, reject: (e) => { clearTimeout(timer); reject(e); } });
+    });
+  }
   on(method, fn) { this.listeners.set(method, [...(this.listeners.get(method) || []), fn]); }
 }
 

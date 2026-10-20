@@ -34,41 +34,70 @@ if (!existsSync(path.join(root, "index.html"))) {
   process.exit(1);
 }
 
+const notFound = path.join(root, "404.html");
+
+function plain(res, status, text) {
+  res.writeHead(status, { "Content-Type": "text/plain; charset=utf-8" });
+  res.end(text);
+}
+
+// Las cabeceras salen recién cuando el archivo abrió: si falla (out/ borrado durante un rebuild,
+// archivo que desapareció) se responde 404 sin tumbar el proceso; sin 404.html, en texto plano.
 function send(req, res, file, status = 200) {
   const type = TYPES[path.extname(file)] ?? "application/octet-stream";
-  const headers = { "Content-Type": type, "Cache-Control": "max-age=600" };
-  const gzip = COMPRESS.test(type) && /\bgzip\b/.test(req.headers["accept-encoding"] ?? "");
-  if (gzip) headers["Content-Encoding"] = "gzip";
-  res.writeHead(status, headers);
   const stream = createReadStream(file);
-  (gzip ? stream.pipe(createGzip()) : stream).pipe(res);
+  res.on("close", () => stream.destroy());
+  stream.on("error", () => {
+    if (res.headersSent) return res.destroy();
+    if (file !== notFound) return send(req, res, notFound, 404);
+    plain(res, 404, "404: out/ no disponible (¿rebuild en curso?)");
+  });
+  stream.on("open", () => {
+    const headers = { "Content-Type": type, "Cache-Control": "max-age=600" };
+    const gzip = COMPRESS.test(type) && /\bgzip\b/.test(req.headers["accept-encoding"] ?? "");
+    if (gzip) headers["Content-Encoding"] = "gzip";
+    res.writeHead(status, headers);
+    (gzip ? stream.pipe(createGzip()) : stream).pipe(res);
+  });
 }
 
 createServer((req, res) => {
   const url = new URL(req.url ?? "/", "http://localhost");
-  let pathname = decodeURIComponent(url.pathname);
+  let pathname;
+  try {
+    pathname = decodeURIComponent(url.pathname);
+  } catch {
+    return plain(res, 400, "400: URL mal codificada");
+  }
   if (base && (pathname === "/" || pathname === "")) {
     res.writeHead(302, { Location: `${base}/` });
     return res.end();
   }
   if (base) {
-    if (pathname !== base && !pathname.startsWith(`${base}/`)) return send(req, res, path.join(root, "404.html"), 404);
+    if (pathname !== base && !pathname.startsWith(`${base}/`)) return send(req, res, notFound, 404);
     pathname = pathname.slice(base.length) || "/";
   }
   const file = path.join(root, pathname);
-  if (!file.startsWith(root)) return send(req, res, path.join(root, "404.html"), 404);
+  if (!file.startsWith(root)) return send(req, res, notFound, 404);
 
-  if (existsSync(file) && statSync(file).isDirectory()) {
+  // throwIfNoEntry: el archivo puede desaparecer entre una comprobación y otra durante un rebuild.
+  const stat = statSync(file, { throwIfNoEntry: false });
+  if (stat?.isDirectory()) {
     if (!pathname.endsWith("/")) {
       res.writeHead(301, { Location: `${base}${pathname}/${url.search}` });
       return res.end();
     }
     const index = path.join(file, "index.html");
     if (existsSync(index)) return send(req, res, index);
-  } else if (existsSync(file)) {
+  } else if (stat) {
     return send(req, res, file);
   } else if (existsSync(`${file}.html`)) {
     return send(req, res, `${file}.html`);
   }
-  send(req, res, path.join(root, "404.html"), 404);
-}).listen(port, () => console.log(`out/ en http://localhost:${port}${base}/`));
+  send(req, res, notFound, 404);
+})
+  .on("error", (err) => {
+    console.error(err.code === "EADDRINUSE" ? `El puerto ${port} ya está en uso (use PORT=otro).` : err);
+    process.exit(1);
+  })
+  .listen(port, () => console.log(`out/ en http://localhost:${port}${base}/`));

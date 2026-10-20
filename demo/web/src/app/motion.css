@@ -255,8 +255,10 @@
   width: var(--pill-w, 0px);
   opacity: var(--pill-o, 0);
 }
+/* La transición solo existe tras la primera medición: al cargar, la píldora aparece directo
+   en el enlace activo (donde estaba el fondo de respaldo) en vez de deslizarse desde Inicio. */
 @media (prefers-reduced-motion: no-preference) {
-  .nav-pill {
+  .nav-list[data-pill-animate] .nav-pill {
     transition:
       translate 0.45s var(--ease-spring),
       width 0.45s var(--ease-spring),

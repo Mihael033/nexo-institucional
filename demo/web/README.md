@@ -4,7 +4,7 @@ Sitio público y panel de administración de la demo. Next.js 16 (App Router, Ca
 
 ## Ejecutar
 
-Requisito: Node.js 22 (o 20.9+).
+Requisito: Node.js 22.12 o superior (22, 24 o 26; Vitest 5 y Vite 8 no admiten Node 20).
 
 ```sh
 npm ci

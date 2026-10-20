@@ -44,7 +44,7 @@ Nexo, sus productos, noticias y personas son ficticios.
 
 ## Ejecutar en local (API + web)
 
-Requisitos: [SDK de .NET 10](https://dotnet.microsoft.com/download) y [Node.js 22](https://nodejs.org).
+Requisitos: [SDK de .NET 10](https://dotnet.microsoft.com/download) y [Node.js 22.12 o superior](https://nodejs.org) (22, 24 o 26).
 
 ```sh
 # 1) API (terminal 1): crea y llena una base SQLite en el primer arranque

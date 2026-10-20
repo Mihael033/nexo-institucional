@@ -52,11 +52,12 @@ export function Manifesto({ data, stat }: { data: BlockDataMap["richText"]; stat
             </div>
           </Parallax>
           <Parallax offset={-90} className="overflow-hidden rounded-2xl bg-cobalt p-5 text-white">
-            <div className="flex h-full flex-col justify-between">
+            {/* @container: la cifra se mide por el ancho de la tarjeta (no del viewport) y nunca se corta. */}
+            <div className="@container flex h-full flex-col justify-between">
               {stat ? (
                 <>
                   <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/85">{stat.label}</span>
-                  <span className="font-display text-[clamp(2.4rem,5vw,4.5rem)] font-black leading-none tracking-[-0.06em]">
+                  <span className="font-display text-[clamp(1.75rem,26cqw,4.5rem)] font-black leading-none tracking-[-0.06em]">
                     <Counter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                   </span>
                 </>

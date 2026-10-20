@@ -125,6 +125,16 @@ function DesktopNav({
     return () => window.removeEventListener("resize", measure);
   }, [indicator, pathname]);
 
+  // Animar recién después de que la primera posición quedó pintada (dos frames).
+  const [animate, setAnimate] = useState(false);
+  useEffect(() => {
+    if (!pill || animate) return;
+    let raf = requestAnimationFrame(() => {
+      raf = requestAnimationFrame(() => setAnimate(true));
+    });
+    return () => cancelAnimationFrame(raf);
+  }, [pill, animate]);
+
   const pillStyle: CSSProperties = pill
     ? ({ "--pill-x": `${pill.x}px`, "--pill-w": `${pill.w}px`, "--pill-o": 1 } as CSSProperties)
     : ({ "--pill-o": 0 } as CSSProperties);
@@ -134,6 +144,7 @@ function DesktopNav({
       <ul
         ref={listRef}
         data-pill-ready={pill ? "" : undefined}
+        data-pill-animate={animate ? "" : undefined}
         className="nav-list relative flex items-center gap-1"
         onMouseLeave={() => onHover(null)}
       >
