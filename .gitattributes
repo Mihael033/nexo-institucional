@@ -1,0 +1,12 @@
+* text=auto eol=lf
+# Los scripts de Windows necesitan CRLF (cmd.exe falla con etiquetas en archivos LF).
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary

@@ -1,0 +1,752 @@
+[
+  {
+    "id": 1,
+    "slug": "router-wi-fi-7",
+    "nombre": "Router Wi-Fi 7",
+    "categoria": {
+      "nombre": "Equipos de red",
+      "slug": "equipos-de-red"
+    },
+    "marca": "Illimani",
+    "precioBs": 261,
+    "disponible": true,
+    "estado": "Nuevo",
+    "destacado": true,
+    "descripcion": "Router Wi-Fi 7 de la marca Illimani. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod1-1/800/600",
+      "https://picsum.photos/seed/prod1-2/800/600",
+      "https://picsum.photos/seed/prod1-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 12,
+      "ubicacion": "La Paz"
+    },
+    "creadoEn": "2026-01-11T00:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "slug": "switch-24-puertos",
+    "nombre": "Switch 24 puertos",
+    "categoria": {
+      "nombre": "Equipos de red",
+      "slug": "equipos-de-red"
+    },
+    "marca": "Sajama",
+    "precioBs": 444,
+    "disponible": true,
+    "estado": "Nuevo",
+    "destacado": false,
+    "descripcion": "Switch 24 puertos de la marca Sajama. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod2-1/800/600",
+      "https://picsum.photos/seed/prod2-2/800/600",
+      "https://picsum.photos/seed/prod2-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 24,
+      "ubicacion": "Santa Cruz de la Sierra"
+    },
+    "creadoEn": "2026-01-21T00:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "slug": "access-point-exterior",
+    "nombre": "Access Point exterior",
+    "categoria": {
+      "nombre": "Equipos de red",
+      "slug": "equipos-de-red"
+    },
+    "marca": "Tunari",
+    "precioBs": 749,
+    "disponible": true,
+    "estado": "Usado",
+    "destacado": false,
+    "descripcion": "Access Point exterior de la marca Tunari. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod3-1/800/600",
+      "https://picsum.photos/seed/prod3-2/800/600",
+      "https://picsum.photos/seed/prod3-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 6,
+      "ubicacion": "Cochabamba"
+    },
+    "creadoEn": "2026-01-31T00:00:00.000Z"
+  },
+  {
+    "id": 4,
+    "slug": "onu-gpon",
+    "nombre": "ONU GPON",
+    "categoria": {
+      "nombre": "Equipos de red",
+      "slug": "equipos-de-red"
+    },
+    "marca": "Chaco",
+    "precioBs": 1176,
+    "disponible": false,
+    "estado": "Nuevo",
+    "destacado": false,
+    "descripcion": "ONU GPON de la marca Chaco. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod4-1/800/600",
+      "https://picsum.photos/seed/prod4-2/800/600",
+      "https://picsum.photos/seed/prod4-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 12,
+      "ubicacion": "El Alto"
+    },
+    "creadoEn": "2026-02-10T00:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "slug": "rack-12u",
+    "nombre": "Rack 12U",
+    "categoria": {
+      "nombre": "Equipos de red",
+      "slug": "equipos-de-red"
+    },
+    "marca": "Uyuni",
+    "precioBs": 1725,
+    "disponible": true,
+    "estado": "Nuevo",
+    "destacado": false,
+    "descripcion": "Rack 12U de la marca Uyuni. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod5-1/800/600",
+      "https://picsum.photos/seed/prod5-2/800/600",
+      "https://picsum.photos/seed/prod5-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 24,
+      "ubicacion": "Sucre"
+    },
+    "creadoEn": "2026-02-20T00:00:00.000Z"
+  },
+  {
+    "id": 6,
+    "slug": "cable-utp-cat6-305m",
+    "nombre": "Cable UTP Cat6 305m",
+    "categoria": {
+      "nombre": "Equipos de red",
+      "slug": "equipos-de-red"
+    },
+    "marca": "Andes",
+    "precioBs": 2396,
+    "disponible": true,
+    "estado": "Usado",
+    "destacado": true,
+    "descripcion": "Cable UTP Cat6 305m de la marca Andes. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod6-1/800/600",
+      "https://picsum.photos/seed/prod6-2/800/600",
+      "https://picsum.photos/seed/prod6-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 6,
+      "ubicacion": "Tarija"
+    },
+    "creadoEn": "2026-03-02T00:00:00.000Z"
+  },
+  {
+    "id": 7,
+    "slug": "escritorio-ejecutivo",
+    "nombre": "Escritorio ejecutivo",
+    "categoria": {
+      "nombre": "Mobiliario de oficina",
+      "slug": "mobiliario-de-oficina"
+    },
+    "marca": "Illimani",
+    "precioBs": 3189,
+    "disponible": true,
+    "estado": "Nuevo",
+    "destacado": false,
+    "descripcion": "Escritorio ejecutivo de la marca Illimani. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod7-1/800/600",
+      "https://picsum.photos/seed/prod7-2/800/600",
+      "https://picsum.photos/seed/prod7-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 12,
+      "ubicacion": "La Paz"
+    },
+    "creadoEn": "2026-03-12T00:00:00.000Z"
+  },
+  {
+    "id": 8,
+    "slug": "silla-ergonomica",
+    "nombre": "Silla ergonómica",
+    "categoria": {
+      "nombre": "Mobiliario de oficina",
+      "slug": "mobiliario-de-oficina"
+    },
+    "marca": "Sajama",
+    "precioBs": 4104,
+    "disponible": false,
+    "estado": "Nuevo",
+    "destacado": false,
+    "descripcion": "Silla ergonómica de la marca Sajama. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod8-1/800/600",
+      "https://picsum.photos/seed/prod8-2/800/600",
+      "https://picsum.photos/seed/prod8-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 24,
+      "ubicacion": "Santa Cruz de la Sierra"
+    },
+    "creadoEn": "2026-03-22T00:00:00.000Z"
+  },
+  {
+    "id": 9,
+    "slug": "archivero-metalico",
+    "nombre": "Archivero metálico",
+    "categoria": {
+      "nombre": "Mobiliario de oficina",
+      "slug": "mobiliario-de-oficina"
+    },
+    "marca": "Tunari",
+    "precioBs": 5141,
+    "disponible": true,
+    "estado": "Usado",
+    "destacado": false,
+    "descripcion": "Archivero metálico de la marca Tunari. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod9-1/800/600",
+      "https://picsum.photos/seed/prod9-2/800/600",
+      "https://picsum.photos/seed/prod9-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 6,
+      "ubicacion": "Cochabamba"
+    },
+    "creadoEn": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": 10,
+    "slug": "mesa-de-reuniones",
+    "nombre": "Mesa de reuniones",
+    "categoria": {
+      "nombre": "Mobiliario de oficina",
+      "slug": "mobiliario-de-oficina"
+    },
+    "marca": "Chaco",
+    "precioBs": 6300,
+    "disponible": true,
+    "estado": "Nuevo",
+    "destacado": false,
+    "descripcion": "Mesa de reuniones de la marca Chaco. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod10-1/800/600",
+      "https://picsum.photos/seed/prod10-2/800/600",
+      "https://picsum.photos/seed/prod10-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 12,
+      "ubicacion": "El Alto"
+    },
+    "creadoEn": "2026-04-11T00:00:00.000Z"
+  },
+  {
+    "id": 11,
+    "slug": "estante-modular",
+    "nombre": "Estante modular",
+    "categoria": {
+      "nombre": "Mobiliario de oficina",
+      "slug": "mobiliario-de-oficina"
+    },
+    "marca": "Uyuni",
+    "precioBs": 7581,
+    "disponible": true,
+    "estado": "Nuevo",
+    "destacado": true,
+    "descripcion": "Estante modular de la marca Uyuni. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod11-1/800/600",
+      "https://picsum.photos/seed/prod11-2/800/600",
+      "https://picsum.photos/seed/prod11-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 24,
+      "ubicacion": "Sucre"
+    },
+    "creadoEn": "2026-04-21T00:00:00.000Z"
+  },
+  {
+    "id": 12,
+    "slug": "sofa-de-recepcion",
+    "nombre": "Sofá de recepción",
+    "categoria": {
+      "nombre": "Mobiliario de oficina",
+      "slug": "mobiliario-de-oficina"
+    },
+    "marca": "Andes",
+    "precioBs": 8984,
+    "disponible": false,
+    "estado": "Usado",
+    "destacado": false,
+    "descripcion": "Sofá de recepción de la marca Andes. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod12-1/800/600",
+      "https://picsum.photos/seed/prod12-2/800/600",
+      "https://picsum.photos/seed/prod12-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 6,
+      "ubicacion": "Tarija"
+    },
+    "creadoEn": "2026-05-01T00:00:00.000Z"
+  },
+  {
+    "id": 13,
+    "slug": "taladro-percutor",
+    "nombre": "Taladro percutor",
+    "categoria": {
+      "nombre": "Herramientas",
+      "slug": "herramientas"
+    },
+    "marca": "Illimani",
+    "precioBs": 10509,
+    "disponible": true,
+    "estado": "Nuevo",
+    "destacado": false,
+    "descripcion": "Taladro percutor de la marca Illimani. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod13-1/800/600",
+      "https://picsum.photos/seed/prod13-2/800/600",
+      "https://picsum.photos/seed/prod13-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 12,
+      "ubicacion": "La Paz"
+    },
+    "creadoEn": "2026-05-11T00:00:00.000Z"
+  },
+  {
+    "id": 14,
+    "slug": "amoladora-angular",
+    "nombre": "Amoladora angular",
+    "categoria": {
+      "nombre": "Herramientas",
+      "slug": "herramientas"
+    },
+    "marca": "Sajama",
+    "precioBs": 12156,
+    "disponible": true,
+    "estado": "Nuevo",
+    "destacado": false,
+    "descripcion": "Amoladora angular de la marca Sajama. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod14-1/800/600",
+      "https://picsum.photos/seed/prod14-2/800/600",
+      "https://picsum.photos/seed/prod14-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 24,
+      "ubicacion": "Santa Cruz de la Sierra"
+    },
+    "creadoEn": "2026-05-21T00:00:00.000Z"
+  },
+  {
+    "id": 15,
+    "slug": "juego-de-llaves",
+    "nombre": "Juego de llaves",
+    "categoria": {
+      "nombre": "Herramientas",
+      "slug": "herramientas"
+    },
+    "marca": "Tunari",
+    "precioBs": 13925,
+    "disponible": true,
+    "estado": "Usado",
+    "destacado": false,
+    "descripcion": "Juego de llaves de la marca Tunari. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod15-1/800/600",
+      "https://picsum.photos/seed/prod15-2/800/600",
+      "https://picsum.photos/seed/prod15-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 6,
+      "ubicacion": "Cochabamba"
+    },
+    "creadoEn": "2026-05-31T00:00:00.000Z"
+  },
+  {
+    "id": 16,
+    "slug": "escalera-telescopica",
+    "nombre": "Escalera telescópica",
+    "categoria": {
+      "nombre": "Herramientas",
+      "slug": "herramientas"
+    },
+    "marca": "Chaco",
+    "precioBs": 15816,
+    "disponible": false,
+    "estado": "Nuevo",
+    "destacado": true,
+    "descripcion": "Escalera telescópica de la marca Chaco. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod16-1/800/600",
+      "https://picsum.photos/seed/prod16-2/800/600",
+      "https://picsum.photos/seed/prod16-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 12,
+      "ubicacion": "El Alto"
+    },
+    "creadoEn": "2026-06-10T00:00:00.000Z"
+  },
+  {
+    "id": 17,
+    "slug": "generador-5-kva",
+    "nombre": "Generador 5 kVA",
+    "categoria": {
+      "nombre": "Herramientas",
+      "slug": "herramientas"
+    },
+    "marca": "Uyuni",
+    "precioBs": 17829,
+    "disponible": true,
+    "estado": "Nuevo",
+    "destacado": false,
+    "descripcion": "Generador 5 kVA de la marca Uyuni. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod17-1/800/600",
+      "https://picsum.photos/seed/prod17-2/800/600",
+      "https://picsum.photos/seed/prod17-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 24,
+      "ubicacion": "Sucre"
+    },
+    "creadoEn": "2026-06-20T00:00:00.000Z"
+  },
+  {
+    "id": 18,
+    "slug": "compresor-de-aire",
+    "nombre": "Compresor de aire",
+    "categoria": {
+      "nombre": "Herramientas",
+      "slug": "herramientas"
+    },
+    "marca": "Andes",
+    "precioBs": 19964,
+    "disponible": true,
+    "estado": "Usado",
+    "destacado": false,
+    "descripcion": "Compresor de aire de la marca Andes. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod18-1/800/600",
+      "https://picsum.photos/seed/prod18-2/800/600",
+      "https://picsum.photos/seed/prod18-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 6,
+      "ubicacion": "Tarija"
+    },
+    "creadoEn": "2026-06-30T00:00:00.000Z"
+  },
+  {
+    "id": 19,
+    "slug": "aire-acondicionado-18000-btu",
+    "nombre": "Aire acondicionado 18000 BTU",
+    "categoria": {
+      "nombre": "Electrodomésticos",
+      "slug": "electrodomesticos"
+    },
+    "marca": "Illimani",
+    "precioBs": 22221,
+    "disponible": true,
+    "estado": "Nuevo",
+    "destacado": false,
+    "descripcion": "Aire acondicionado 18000 BTU de la marca Illimani. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod19-1/800/600",
+      "https://picsum.photos/seed/prod19-2/800/600",
+      "https://picsum.photos/seed/prod19-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 12,
+      "ubicacion": "La Paz"
+    },
+    "creadoEn": "2026-07-10T00:00:00.000Z"
+  },
+  {
+    "id": 20,
+    "slug": "heladera-no-frost",
+    "nombre": "Heladera no frost",
+    "categoria": {
+      "nombre": "Electrodomésticos",
+      "slug": "electrodomesticos"
+    },
+    "marca": "Sajama",
+    "precioBs": 24600,
+    "disponible": false,
+    "estado": "Nuevo",
+    "destacado": false,
+    "descripcion": "Heladera no frost de la marca Sajama. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod20-1/800/600",
+      "https://picsum.photos/seed/prod20-2/800/600",
+      "https://picsum.photos/seed/prod20-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 24,
+      "ubicacion": "Santa Cruz de la Sierra"
+    },
+    "creadoEn": "2026-07-20T00:00:00.000Z"
+  },
+  {
+    "id": 21,
+    "slug": "microondas-30l",
+    "nombre": "Microondas 30L",
+    "categoria": {
+      "nombre": "Electrodomésticos",
+      "slug": "electrodomesticos"
+    },
+    "marca": "Tunari",
+    "precioBs": 27101,
+    "disponible": true,
+    "estado": "Usado",
+    "destacado": true,
+    "descripcion": "Microondas 30L de la marca Tunari. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod21-1/800/600",
+      "https://picsum.photos/seed/prod21-2/800/600",
+      "https://picsum.photos/seed/prod21-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 6,
+      "ubicacion": "Cochabamba"
+    },
+    "creadoEn": "2026-07-30T00:00:00.000Z"
+  },
+  {
+    "id": 22,
+    "slug": "termo-electrico",
+    "nombre": "Termo eléctrico",
+    "categoria": {
+      "nombre": "Electrodomésticos",
+      "slug": "electrodomesticos"
+    },
+    "marca": "Chaco",
+    "precioBs": 29724,
+    "disponible": true,
+    "estado": "Nuevo",
+    "destacado": false,
+    "descripcion": "Termo eléctrico de la marca Chaco. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod22-1/800/600",
+      "https://picsum.photos/seed/prod22-2/800/600",
+      "https://picsum.photos/seed/prod22-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 12,
+      "ubicacion": "El Alto"
+    },
+    "creadoEn": "2026-08-09T00:00:00.000Z"
+  },
+  {
+    "id": 23,
+    "slug": "ventilador-de-techo",
+    "nombre": "Ventilador de techo",
+    "categoria": {
+      "nombre": "Electrodomésticos",
+      "slug": "electrodomesticos"
+    },
+    "marca": "Uyuni",
+    "precioBs": 32469,
+    "disponible": true,
+    "estado": "Nuevo",
+    "destacado": false,
+    "descripcion": "Ventilador de techo de la marca Uyuni. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod23-1/800/600",
+      "https://picsum.photos/seed/prod23-2/800/600",
+      "https://picsum.photos/seed/prod23-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 24,
+      "ubicacion": "Sucre"
+    },
+    "creadoEn": "2026-08-19T00:00:00.000Z"
+  },
+  {
+    "id": 24,
+    "slug": "purificador-de-agua",
+    "nombre": "Purificador de agua",
+    "categoria": {
+      "nombre": "Electrodomésticos",
+      "slug": "electrodomesticos"
+    },
+    "marca": "Andes",
+    "precioBs": 35336,
+    "disponible": false,
+    "estado": "Usado",
+    "destacado": false,
+    "descripcion": "Purificador de agua de la marca Andes. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod24-1/800/600",
+      "https://picsum.photos/seed/prod24-2/800/600",
+      "https://picsum.photos/seed/prod24-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 6,
+      "ubicacion": "Tarija"
+    },
+    "creadoEn": "2026-08-29T00:00:00.000Z"
+  },
+  {
+    "id": 25,
+    "slug": "toyota-hilux-2022",
+    "nombre": "Toyota Hilux 2022",
+    "categoria": {
+      "nombre": "Vehículos",
+      "slug": "vehiculos"
+    },
+    "marca": "Illimani",
+    "precioBs": 222500,
+    "disponible": true,
+    "estado": "Nuevo",
+    "destacado": false,
+    "descripcion": "Toyota Hilux 2022 de la marca Illimani. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod25-1/800/600",
+      "https://picsum.photos/seed/prod25-2/800/600",
+      "https://picsum.photos/seed/prod25-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 12,
+      "ubicacion": "La Paz"
+    },
+    "creadoEn": "2026-09-08T00:00:00.000Z"
+  },
+  {
+    "id": 26,
+    "slug": "moto-honda-cg-160",
+    "nombre": "Moto Honda CG 160",
+    "categoria": {
+      "nombre": "Vehículos",
+      "slug": "vehiculos"
+    },
+    "marca": "Sajama",
+    "precioBs": 229800,
+    "disponible": true,
+    "estado": "Nuevo",
+    "destacado": true,
+    "descripcion": "Moto Honda CG 160 de la marca Sajama. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod26-1/800/600",
+      "https://picsum.photos/seed/prod26-2/800/600",
+      "https://picsum.photos/seed/prod26-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 24,
+      "ubicacion": "Santa Cruz de la Sierra"
+    },
+    "creadoEn": "2026-09-18T00:00:00.000Z"
+  },
+  {
+    "id": 27,
+    "slug": "furgon-hyundai-h100",
+    "nombre": "Furgón Hyundai H100",
+    "categoria": {
+      "nombre": "Vehículos",
+      "slug": "vehiculos"
+    },
+    "marca": "Tunari",
+    "precioBs": 237100,
+    "disponible": true,
+    "estado": "Usado",
+    "destacado": false,
+    "descripcion": "Furgón Hyundai H100 de la marca Tunari. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod27-1/800/600",
+      "https://picsum.photos/seed/prod27-2/800/600",
+      "https://picsum.photos/seed/prod27-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 6,
+      "ubicacion": "Cochabamba"
+    },
+    "creadoEn": "2026-09-28T00:00:00.000Z"
+  },
+  {
+    "id": 28,
+    "slug": "toyota-vitz-2015",
+    "nombre": "Toyota Vitz 2015",
+    "categoria": {
+      "nombre": "Vehículos",
+      "slug": "vehiculos"
+    },
+    "marca": "Chaco",
+    "precioBs": 244400,
+    "disponible": false,
+    "estado": "Nuevo",
+    "destacado": false,
+    "descripcion": "Toyota Vitz 2015 de la marca Chaco. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod28-1/800/600",
+      "https://picsum.photos/seed/prod28-2/800/600",
+      "https://picsum.photos/seed/prod28-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 12,
+      "ubicacion": "El Alto"
+    },
+    "creadoEn": "2026-10-08T00:00:00.000Z"
+  },
+  {
+    "id": 29,
+    "slug": "camion-isuzu-npr",
+    "nombre": "Camión Isuzu NPR",
+    "categoria": {
+      "nombre": "Vehículos",
+      "slug": "vehiculos"
+    },
+    "marca": "Uyuni",
+    "precioBs": 251700,
+    "disponible": true,
+    "estado": "Nuevo",
+    "destacado": false,
+    "descripcion": "Camión Isuzu NPR de la marca Uyuni. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod29-1/800/600",
+      "https://picsum.photos/seed/prod29-2/800/600",
+      "https://picsum.photos/seed/prod29-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 24,
+      "ubicacion": "Sucre"
+    },
+    "creadoEn": "2026-10-18T00:00:00.000Z"
+  },
+  {
+    "id": 30,
+    "slug": "cuatriciclo-250cc",
+    "nombre": "Cuatriciclo 250cc",
+    "categoria": {
+      "nombre": "Vehículos",
+      "slug": "vehiculos"
+    },
+    "marca": "Andes",
+    "precioBs": 259000,
+    "disponible": true,
+    "estado": "Usado",
+    "destacado": false,
+    "descripcion": "Cuatriciclo 250cc de la marca Andes. Ideal para uso institucional, con garantía y soporte local en Bolivia.",
+    "imagenes": [
+      "https://picsum.photos/seed/prod30-1/800/600",
+      "https://picsum.photos/seed/prod30-2/800/600",
+      "https://picsum.photos/seed/prod30-3/800/600"
+    ],
+    "atributos": {
+      "garantiaMeses": 6,
+      "ubicacion": "Tarija"
+    },
+    "creadoEn": "2026-10-28T00:00:00.000Z"
+  }
+]

@@ -1,0 +1,131 @@
+# Integración continua y demo en GitHub Pages.
+#   api    → dotnet build (avisos = errores) + dotnet test (unitarias e integración con SQLite)
+#   web    → npm ci, lint, typecheck, tests (Vitest), export estático del front en MODO DEMO
+#            (NEXT_PUBLIC_API_MODE=mock: sin servidor, datos de ejemplo en el navegador) y prueba
+#            de humo del export en Chrome sin interfaz (tools/smoke-pages.mjs)
+#   deploy → publica demo/web/out en GitHub Pages (solo en push, si api y web pasan)
+#
+# Ruta de la demo: por defecto https://<usuario>.github.io/<repositorio>/ (basePath /<repositorio>).
+# Para otra (dominio propio, repositorio usuario.github.io…), define en Settings → Secrets and
+# variables → Actions → Variables: PAGES_BASE_PATH (/ para la raíz, o p. ej. /demo) y PAGES_SITE_URL.
+# Activa Pages una vez en Settings → Pages → Source: GitHub Actions.
+
+name: CI y GitHub Pages
+
+on:
+  push:
+    branches: [main, publico]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Recomendación de GitHub Pages: no cancelar una publicación en curso.
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  api:
+    name: API .NET 10 (build y tests)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: demo/api
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restaurar
+        run: dotnet restore Nexo.slnx
+
+      - name: Compilar (avisos = errores)
+        run: dotnet build Nexo.slnx --no-restore --configuration Release
+
+      - name: Pruebas unitarias y de integración
+        run: dotnet test Nexo.slnx --no-build --configuration Release
+
+  web:
+    name: Web Next.js (lint, tests y export estático)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: demo/web
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: demo/web/package-lock.json
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Tipos (TypeScript)
+        run: npm run typecheck
+
+      - name: Pruebas (Vitest)
+        run: npm test
+
+      - name: Calcular la ruta de la demo
+        id: site
+        env:
+          PAGES_BASE_PATH: ${{ vars.PAGES_BASE_PATH }}
+          PAGES_SITE_URL: ${{ vars.PAGES_SITE_URL }}
+        run: |
+          owner="$(printf '%s' "$GITHUB_REPOSITORY_OWNER" | tr '[:upper:]' '[:lower:]')"
+          repo="${GITHUB_REPOSITORY#*/}"
+          if [ -n "$PAGES_BASE_PATH" ]; then
+            base="/${PAGES_BASE_PATH#/}"; base="${base%/}"   # "/" → raíz ; "demo" o "/demo/" → /demo
+          elif [ "$(printf '%s' "$repo" | tr '[:upper:]' '[:lower:]')" = "${owner}.github.io" ]; then
+            base=""
+          else
+            base="/${repo}"
+          fi
+          site="${PAGES_SITE_URL:-https://${owner}.github.io${base}}"
+          echo "basePath: '${base}'  ·  URL: ${site%/}"
+          echo "base=${base}" >> "$GITHUB_OUTPUT"
+          echo "url=${site%/}" >> "$GITHUB_OUTPUT"
+
+      - name: Export estático en modo demo
+        env:
+          NEXT_PUBLIC_API_MODE: mock
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.site.outputs.base }}
+          NEXT_PUBLIC_SITE_URL: ${{ steps.site.outputs.url }}
+        run: npm run build:static
+
+      # Recorre el export servido bajo el basePath con Chrome sin interfaz (incluye el login del panel).
+      - name: Prueba de humo del sitio estático
+        env:
+          BASE: ${{ steps.site.outputs.base }}
+        run: node ../../tools/smoke-pages.mjs --prefix "${BASE:-/}"
+
+      - name: Subir el sitio
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: demo/web/out
+
+  deploy:
+    name: Publicar en GitHub Pages
+    if: github.event_name != 'pull_request'
+    needs: [api, web]
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

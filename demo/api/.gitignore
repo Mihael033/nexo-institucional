@@ -1,0 +1,9 @@
+bin/
+obj/
+*.db
+*.db-shm
+*.db-wal
+appsettings.*.local.json
+.vs/
+TestResults/
+demo-api.log*

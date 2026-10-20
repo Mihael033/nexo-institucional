@@ -1,0 +1,21 @@
+# Dependencias y compilaciones
+node_modules/
+.next/
+out/
+bin/
+obj/
+TestResults/
+.vs/
+*.user
+
+# Datos locales de la demo (SQLite y registros)
+*.db
+*.db-shm
+*.db-wal
+*.log
+*.log.err
+
+# Entorno local
+.env
+.env.local
+.env.*.local
